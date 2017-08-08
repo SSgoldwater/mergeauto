@@ -1,21 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import App from '../components/App';
-import Main from '../components/main/Main';
+import Home from '../components/home/Home';
 import Login from '../components/layout/Login';
-import theme from './Theme.js';
+import theme from './Theme';
 
-const FWRouter = (
+const _Router = (
   <MuiThemeProvider muiTheme={ theme }>
-    <Router>
-      <div>
-        <Route path="/" component={ App }/>
-        <Route path="/main" component={ Main }/>
+    <Router history={ history }>
+      <App>
+        <Route
+          path="/home"
+          render={ (props) => <Home { ...props }/> }
+        />
         <Route path="/login" component={ Login }/>
-      </div>
+      </App>
     </Router>
   </MuiThemeProvider>
 );
 
-export default FWRouter;
+export default _Router;

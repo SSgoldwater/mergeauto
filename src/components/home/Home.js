@@ -5,7 +5,7 @@ import CreateToDo from './CreateToDo';
 import ToDoItem from './ToDoItem';
 import styles from './styles/MainStyles';
 
-class Main extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
 
@@ -50,4 +50,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default Home;
