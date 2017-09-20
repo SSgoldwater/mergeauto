@@ -1,23 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import App from '../components/App';
-import Home from '../components/home/Home';
-import Login from '../components/layout/Login';
-import theme from './Theme';
+import Home from 'components/Home';
+import Layout from 'components/Layout';
+import history from 'utils/history';
 
-const _Router = (
-  <MuiThemeProvider muiTheme={ theme }>
-    <Router history={ history }>
-      <App>
-        <Route
-          path="/home"
-          render={ (props) => <Home { ...props }/> }
-        />
-        <Route path="/login" component={ Login }/>
-      </App>
-    </Router>
-  </MuiThemeProvider>
-);
+const _Router = () =>
+  <Router history={ history }>
+    <Switch>
+      <Route
+        path={ `/` }
+        render={ props =>
+          <Layout>
+            <Home { ...props }/>
+          </Layout>
+        }
+      />
+    </Switch>
+  </Router>
 
 export default _Router;
