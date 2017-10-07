@@ -1,6 +1,7 @@
 import Background from 'assets/HomepageBackground.png';
+import { palette } from 'utils/Theme';
 
-export default {
+const _desktop = {
   container: {
     background: `url(${Background}) no-repeat`,
     backgroundSize: `100% 100%`,
@@ -8,7 +9,6 @@ export default {
   },
   usedCars: {
     position: `absolute`,
-    fontSize: `48px`,
     textAlign: `center`,
     lineHeight: `64px`,
     right: `0px`,
@@ -18,7 +18,6 @@ export default {
   newCars: {
     position: `absolute`,
     textAlign: `center`,
-    fontSize: `48px`,
     lineHeight: `64px`,
     bottom: `0px`,
     width: `60vw`,
@@ -47,4 +46,49 @@ export default {
   buttonLabel: {
     textTransform: `none`
   }
+}
+
+const _mobile = {
+  title: {
+    width: `85%`,
+    margin: `0px auto 18px`
+  },
+  thin: {
+    marginTop: `0px`,
+    fontSize: `24px`,
+    textShadow: `1px 1px 4px rgba(0,0,0,.3)`,
+    fontWeight: `400`
+  },
+  bold: {
+    fontSize: `24px`,
+    textShadow: `1px 1px 4px rgba(0,0,0,.3)`,
+    fontStyle: `italic`,
+    fontWeight: `800`
+  },
+  usedCars: {
+    textAlign: `center`,
+    margin: `0px`,
+    padding: `24px`,
+    minHeight: `calc(50vh - 102px)`
+  },
+  newCars: {
+    textAlign: `center`,
+    padding: `24px`,
+    minHeight: `calc(50vh - 102px)`,
+    backgroundColor: palette.primary1Color
+  },
+  button: {
+    margin: `12px 0px`,
+    height: `48px`,
+    width: `70%`
+  },
+  buttonLabel: {
+    textTransform: `none`,
+    lineHeight: `48px`
+  }
+}
+
+export default {
+  desktop: _desktop,
+  mobile: _mobile
 }

@@ -3,17 +3,19 @@ import RaisedButton from 'material-ui/RaisedButton';
 import styles from './styles';
 
 const Home = ({ ...props }) => {
-  const _styles = styles;
+  console.log(props.responsive);
+  const _styles = styles[props.responsive];
+  console.log(_styles);
 
   return (
     <div style={ _styles.container }>
       <div style={ _styles.usedCars }>
-        <div>
+        <h1 style={ _styles.title }>
           <span style={ _styles.thin }>
             Buy a used car from the auctions at 
           </span>
           <span style={ _styles.bold }> our cost</span>
-        </div>
+        </h1>
         <div style={ _styles.usedButtons }>
           <RaisedButton
             primary
@@ -32,12 +34,12 @@ const Home = ({ ...props }) => {
         </div>
       </div>
       <div style={ _styles.newCars }>
-        <div>
+        <h1 style={ _styles.title }>
           <span style={ _styles.thin }>
-            Buy a new car from us at 
+            Buy a new car through us at 
           </span>
-          <span style={ _styles.bold }> our cost</span>
-        </div>
+          <span style={ _styles.bold }> dealership cost</span>
+        </h1>
         <div style={ _styles.newButtons }>
           <RaisedButton
             secondary

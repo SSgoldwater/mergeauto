@@ -41,6 +41,7 @@ const _mobile = {
   },
   subTitle: {
     padding: `6px`,
+    margin: `0px`,
     fontStyle: `italic`,
     textAlign: `center`,
     borderTop: `1px solid #000`,

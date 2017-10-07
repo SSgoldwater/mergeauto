@@ -5,10 +5,12 @@ var BUILD_DIR = path.resolve(__dirname, 'build');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
+  context: APP_DIR,
   entry: APP_DIR + '/index.jsx',
   devtool: 'eval',
   output: {
     path: BUILD_DIR,
+    publicPath: '/',
     filename: 'bundle.js'
   },
   module : {
@@ -25,6 +27,12 @@ var config = {
           limit: 25000,
         }
       }
+    ]
+  },
+  resolve: {
+    modules: [
+      path.resolve(APP_DIR),
+      path.resolve("./node_modules")
     ]
   },
   node: {
