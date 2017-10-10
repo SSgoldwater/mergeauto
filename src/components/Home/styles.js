@@ -1,10 +1,7 @@
-import Background from 'assets/HomepageBackground.png';
 import { palette } from 'utils/Theme';
 
 const _desktop = {
   container: {
-    background: `url(${Background}) no-repeat`,
-    backgroundSize: `100% 100%`,
     height: `calc(100vh - 72px)`,
   },
   usedCars: {
@@ -69,12 +66,12 @@ const _mobile = {
     textAlign: `center`,
     margin: `0px`,
     padding: `24px`,
-    minHeight: `calc(50vh - 102px)`
+    maxHeight: `calc(50vh - 102px)`
   },
   newCars: {
     textAlign: `center`,
     padding: `24px`,
-    minHeight: `calc(50vh - 102px)`,
+    maxHeight: `calc(50vh - 102px)`,
     backgroundColor: palette.primary1Color
   },
   button: {

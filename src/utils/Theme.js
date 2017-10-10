@@ -28,6 +28,9 @@ const theme = getMuiTheme({
   palette: palette,
   appBar: {
     color: `#FFF`
+  },
+  tabs: {
+    backgroundColor: `#FFF`
   }
 });
 
