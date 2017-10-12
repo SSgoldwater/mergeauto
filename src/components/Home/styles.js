@@ -2,7 +2,8 @@ import { palette } from 'utils/Theme';
 
 const _desktop = {
   container: {
-    height: `calc(100vh - 72px)`,
+    minHeight: `calc(100vh - 72px)`,
+    backgroundColor: `#E6E6E6`
   },
   usedCars: {
     position: `absolute`,

@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
 import { Tab, Tabs } from 'material-ui/Tabs';
+import LookingFor from './LookingFor';
+import Details from './Details';
+import ContactInfo from './ContactInfo';
+import styles from './styles';
 
 class InterestForm extends Component {
   render() {
+    const _styles = styles[this.props.responsive];
+
     return (
-      <Tabs>
+      <Tabs
+        style={ _styles.tabs }
+        inkBarStyle={ _styles.inkBar }
+      >
         <Tab
           label={ `Looking For` }
         >
-          <h1>Whatchu need?</h1>
+          <LookingFor responsive={ this.props.responsive }/>
         </Tab>
         <Tab
           label={ `Details` }
         >
-          <h1>Details</h1>
+          <Details responsive={ this.props.responsive }/>
         </Tab>
         <Tab
           label={ `Contact Info` }
         >
-          <h1>Contact Info</h1>
+          <ContactInfo responsive={ this.props.responsive }/>
         </Tab>
       </Tabs>
     );
