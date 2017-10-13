@@ -1,50 +1,38 @@
-import Background from 'assets/HomepageBackground.png';
+import { palette } from 'utils/Theme';
+
+const _desktop = {
+  container: {
+    minHeight: `calc(100vh - 72px)`,
+    backgroundColor: `#EDEDED`,
+    textAlign: `center`
+  },
+  submitSection: {
+    width: `90%`,
+    maxWidth: `724px`,
+    margin: `auto`,
+    paddingBottom: `5vw`,
+    textAlign: `center`
+  },
+  submitButton: {
+    marginTop: `24px`
+  }
+}
+
+const _mobile = {
+  container: {
+    minHeight: `calc(100vh - 72px)`,
+    textAlign: `center`,
+    backgroundColor: `#EDEDED`
+  },
+  submitSection: {
+    width: `90%`,
+    maxWidth: `724px`,
+    margin: `auto`,
+    paddingBottom: `5vw`
+  }
+}
 
 export default {
-  container: {
-    background: `url(${Background}) no-repeat`,
-    backgroundSize: `100% 100%`,
-    height: `calc(100vh - 72px)`,
-  },
-  usedCars: {
-    position: `absolute`,
-    fontSize: `48px`,
-    textAlign: `center`,
-    lineHeight: `64px`,
-    right: `0px`,
-    width: `60vw`,
-    margin: `24px`
-  },
-  newCars: {
-    position: `absolute`,
-    textAlign: `center`,
-    fontSize: `48px`,
-    lineHeight: `64px`,
-    bottom: `0px`,
-    width: `60vw`,
-    margin: `24px`
-  },
-  thin: {
-    textShadow: `1px 1px 4px rgba(0,0,0,.3)`,
-    fontWeight: `400`
-  },
-  bold: {
-    textShadow: `1px 1px 4px rgba(0,0,0,.3)`,
-    fontStyle: `italic`,
-    fontWeight: `800`
-  },
-  usedButtons: {
-    textAlign: `right`,
-    margin: `18px`
-  },
-  newButtons: {
-    textAlign: `center`,
-    margin: `18px`
-  },
-  button: {
-    margin: `12px`
-  },
-  buttonLabel: {
-    textTransform: `none`
-  }
+  desktop: _desktop,
+  mobile: _mobile
 }

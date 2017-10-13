@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import Home from 'components/Home';
+import Description from 'components/Description';
 import Layout from 'components/Layout';
 import history from 'utils/history';
 
@@ -8,7 +9,15 @@ const _Router = () =>
   <Router history={ history }>
     <Switch>
       <Route
-        path={ `/` }
+        path={ `/description/` }
+        render={ props =>
+          <Layout>
+            <Description { ...props }/>
+          </Layout>
+        }
+      />
+      <Route
+        path={ `` }
         render={ props =>
           <Layout>
             <Home { ...props }/>
