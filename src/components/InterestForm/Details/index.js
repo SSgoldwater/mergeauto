@@ -9,10 +9,11 @@ class Details extends Component {
 
     return (
       <Paper style={ _styles.contentPaper }>
-        <h3>Explain in your own words.</h3>
+        <h4>Explain in your own words.</h4>
         <p>Don't feel like our pre-made form captures the essence of the vehicle you're looking for? Tell us exactly what you want, be as vague or specific as you please.</p>
         <Paper style={ _styles.textFieldPaper }>
           <TextField
+            name={ `description` }
             multiLine
             fullWidth
             rows={ 10 }

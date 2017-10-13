@@ -70,9 +70,9 @@ class ContactInfo extends Component {
 
   _timeCheckboxUpdate = (value) => {
     if (this.state.availableTimes.includes(value)) {
-      const _checked = this.state.availableTimes.filter((time) => {
-        return time !== value;
-      });
+      const _checked = this.state.availableTimes.filter(time =>
+        time !== value
+      );
 
       this.setState({ availableTimes: _checked });
     } else {
@@ -91,6 +91,7 @@ class ContactInfo extends Component {
       return (
         <Checkbox
           key={ time.value }
+          style={ _styles.checkbox }
           label={ time.label }
           checked={ this.state.availableTimes.includes(time.value) }
           onCheck={ () => this._timeCheckboxUpdate(time.value) }
@@ -100,9 +101,10 @@ class ContactInfo extends Component {
 
     return (
       <Paper style={ _styles.contentPaper }>
-        <h3>How would you like us to contact you?</h3>
+        <h4>How would you like us to contact you?</h4>
         <p>We will NOT share your contact information with third parties.</p>
         <Checkbox
+          style={ _styles.checkbox }
           label={
             `Contact me via phone call (we will leave
             a message if you are unable to answer)`
@@ -111,6 +113,7 @@ class ContactInfo extends Component {
           onCheck={ this._updatePhoneCheck }
         />
         <Checkbox
+          style={ _styles.checkbox }
           label={ `Contact me via email` }
           checked={ this.state.emailChecked }
           onCheck={ this._updateEmailCheck }
@@ -129,8 +132,12 @@ class ContactInfo extends Component {
           floatingLabelText={ `Email Address` }
           onChange={ this._updateEmail }
         />
-        <h3>Whan is most convienent for you to hear from us?</h3>
-        <p>Check all that apply</p>
+        <h4>
+          When would you like to be contacted?
+          <span style={ _styles.checkAll }>
+            (Check all that apply)
+          </span>
+        </h4>
         { _timeCheckboxes }
       </Paper>
     );
