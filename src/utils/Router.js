@@ -5,6 +5,8 @@ import Description from 'components/Description';
 import Layout from 'components/Layout';
 import history from 'utils/history';
 
+emailjs.init("user_rOytwEWqiJBLNP9jwX3Rk");
+
 const _Router = () =>
   <Router history={ history }>
     <Switch>

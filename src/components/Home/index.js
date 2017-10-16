@@ -14,6 +14,10 @@ const Home = ({ ...props }) => {
     history.push(`/description/`);
   };
 
+  const _submitForm = (formInfo) => {
+    
+  }
+
   return (
     <div style={ _styles.container }>
       <Description responsive={ props.responsive }/>
