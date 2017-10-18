@@ -28,19 +28,6 @@ class Description extends Component {
           auctions and dealerships right now that
           match your search.
         </h4>
-        <div style={ _styles.why }>
-          <h3 style={ _styles.subheader }>
-            Why broker?
-          </h3>
-          <p style={ _styles.description }>
-            Going with a broker is the best way to know
-            that you have someone on your side during a car
-            buying experience. It's like having a friend
-            in the business. Expect full transperency and
-            a personal touch unparalleled in the auto-sales
-            world.
-          </p>
-        </div>
         <Link
           to={ `form` }
           smooth
