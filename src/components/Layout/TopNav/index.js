@@ -10,7 +10,7 @@ class TopNav extends Component {
 
     const _logo = (
       <img
-        src={ Logo }
+        src={ `http://mergemotorgroup.s3-website-us-west-1.amazonaws.com/merge_brokers_logo.jpg` }
         style={ _styles.logo }
       />
     );
