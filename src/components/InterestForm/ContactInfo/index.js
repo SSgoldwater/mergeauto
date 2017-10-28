@@ -44,6 +44,12 @@ class ContactInfo extends Component {
     };
   }
 
+  componentDidUpdate(nextProps, nextState) {
+    if (this.state !== nextState) {
+      this.props.setContactInfo(nextState);
+    }
+  }
+
   _updatePhoneCheck = () => {
     this.setState({
       phoneChecked: !this.state.phoneChecked

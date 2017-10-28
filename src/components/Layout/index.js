@@ -1,6 +1,5 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
-import AppStore from 'stores/AppStore';
 import history from 'utils/history';
 import TopNav from './TopNav';
 
