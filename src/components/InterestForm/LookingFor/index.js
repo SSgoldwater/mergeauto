@@ -69,6 +69,12 @@ class LookingFor extends Component {
     }
   }
 
+  componentDidUpdate(nextProps, nextState) {
+    if (this.state !== nextState) {
+      nextProps.setLookingFor(nextState);
+    }
+  }
+
   _lifestyleCheckboxUpdate = (value) => {
     if (this.state.lifestyles.includes(value)) {
       const _checked = this.state.lifestyles.filter(lifestyle =>
